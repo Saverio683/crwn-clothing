@@ -7,6 +7,7 @@ const middlewares = [];
 
 if(process.env.REDUX_LOGGER !== 'hidden') {
     middlewares.push(logger);
+    console.log(process.env);
 }
 
 export const store = createStore(rootReducer, applyMiddleware(...middlewares));
