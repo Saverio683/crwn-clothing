@@ -3,9 +3,7 @@ import logger from "redux-logger";
 import { persistStore } from 'redux-persist'
 import rootReducer from "./root-reducer";
 
-if(process.env.REDUX_LOGGER) {
-    console.log('ciao')
-}
+console.log(process.env)
 
 const middlewares = [logger];
 export const store = createStore(rootReducer, applyMiddleware(...middlewares));
