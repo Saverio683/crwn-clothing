@@ -5,9 +5,8 @@ import rootReducer from "./root-reducer";
 
 const middlewares = [];
 
-if(process.env.REDUX_LOGGER !== 'hidden') {
+if(process.env.NODE_ENV === 'development') {
     middlewares.push(logger);
-    console.log(process.env);
 }
 
 export const store = createStore(rootReducer, applyMiddleware(...middlewares));
